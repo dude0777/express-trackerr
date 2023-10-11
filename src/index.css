@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Kanit:wght@200&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a9cbe9;
+  color: white;
+  font-family: "Inclusive Sans", sans-serif;
+  font-family: "Kanit", sans-serif;
+}
+.footerr {
+  background: #16222a;
+  background: -webkit-linear-gradient(59deg, #3a6073, #16222a);
+  background: linear-gradient(59deg, #3a6073, #16222a);
+  color: white;
+  position: relative;
+  margin-top: 6rem;
+}

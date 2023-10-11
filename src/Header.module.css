@@ -1,0 +1,60 @@
+.headercont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  background: #2c4f68;
+  background: -webkit-linear-gradient(59deg, #3a6073, #2c4f68);
+  background: linear-gradient(59deg, #3a6073, #2c4f68);
+}
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+.logo h1 {
+  font-size: 5rem;
+}
+
+.userimg {
+  width: 2rem;
+  height: 2rem;
+}
+.logocont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.title {
+  font-size: 3rem;
+}
+.usercont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: row;
+}
+.usertxt {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 760px) {
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    width: 3rem;
+    height: 3rem;
+  }
+  .usertxt {
+    font-size: 0.7rem;
+  }
+
+  .usercont {
+    gap: 0.5rem;
+  }
+  .headercont {
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,22 @@
+.cardcont {
+  margin-top: 5rem;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 760px) {
+  .cardcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 0.5rem;
+    width: auto;
+    max-width: 95%;
+  }
+}
