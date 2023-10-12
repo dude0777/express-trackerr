@@ -1,8 +1,16 @@
 import classes from './ExpenseItem.module.css'
 import moment from 'moment/moment';
-function ExpenseItem({ name, amount, date, description }) {
+import deleticon from './assets/delete.png'
+
+function ExpenseItem({ name, id, currency, amount, date, description, onRemove }) {
 
 
+
+
+    const handleRemovee = () => {
+        onRemove(id)
+
+    }
 
     return (
         <>
@@ -12,12 +20,17 @@ function ExpenseItem({ name, amount, date, description }) {
 
                 <div className={classes.container2}>
                     <h1 className={classes.name}>{name}</h1>
-                    <p>{moment(date, "DD-MM-YYYY").format("YYYY-MM-DD")}</p>
+                    <p>{moment(date).format('YYYY-MM-DD')}
+                    </p>
+
+
+
 
 
                     <h2 className={classes.price}>{amount}</h2></div>
                 <div>
                     <p>{description}</p></div>
+                <button onClick={handleRemovee} className={classes.btn}><img src={deleticon} alt="" /></button>
             </div>
 
 

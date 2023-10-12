@@ -1,6 +1,7 @@
 import classes from './ExpenseList.module.css'
 import ExpenseItem from './ExpenseItem';
-function ExpenseList({ data }) {
+
+function ExpenseList({ data, onRemove }) {
 
     console.log(data)
 
@@ -11,7 +12,15 @@ function ExpenseList({ data }) {
 
         <div className={classes.cardcont}>
 
-            {data.map((item) => <ExpenseItem key={item.expenseName} name={item.expenseName} amount={item.amount} date={item.date} description={item.description} />)}
+            {data.map((item) =>
+                <ExpenseItem key={item.id}
+                    onRemove={onRemove}
+                    id={item.id}
+                    currency={item.currency}
+                    name={item.expenseName}
+                    amount={item.amount}
+                    date={item.date}
+                    description={item.description} />)}
 
 
         </div>

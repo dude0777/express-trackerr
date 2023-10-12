@@ -3,14 +3,14 @@ import user from './assets/user.png'
 import classes from './Header.module.css'
 function Header() {
     return (
-        <header class={classes.headercont}>
-            <div class={classes.logocont}>
-                <img src={logo} class={classes.logo} alt="" />
+        <header className={classes.headercont}>
+            <div className={classes.logocont}>
+                <img src={logo} className={classes.logo} alt="" />
 
                 <p className={classes.title}>Expense Tracker</p></div>
-            <div class={classes.usercont}>
+            <div className={classes.usercont}>
                 <p className={classes.usertxt}>Hello, Alen</p>
-                <img class={classes.userimg} src={user} alt="" /></div>
+                <img className={classes.userimg} src={user} alt="" /></div>
 
         </header>
 

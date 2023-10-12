@@ -4,7 +4,7 @@ function Footer() {
 
         <div>
 
-            <footer class="footerr">
+            <footer className="footerr">
                 <p >&copy; Copyright 2023 - Trackers.  All rights reserved.</p>
             </footer>
         </div>
