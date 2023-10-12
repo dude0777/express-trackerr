@@ -1,9 +1,11 @@
-export async function getweather() {
+export async function getWeather(lat, lng) {
     try {
-        const response = await fetch("https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&callback=mycallback");
-        const text = await response.text();
-        const jsonString = text.replace(/^mycallback\(/, '').replace(/\);$/, '');
-        const data = JSON.parse(jsonString);
+        const apiUrl = `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}`;
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch data. Status: ${response.status}`);
+        }
+        const data = await response.json();
         return data;
     } catch (error) {
         throw error;
