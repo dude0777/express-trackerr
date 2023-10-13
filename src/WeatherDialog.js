@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getWeather } from './services/Weather';
-
+import classes from './WeatherDialog.module.css'
 function WeatherDialog() {
     const [weather, setWeather] = useState(null);
     const [latitude, setLatitude] = useState(null);
@@ -16,7 +16,7 @@ function WeatherDialog() {
                 setLatitude(latitude);
                 setLongitude(longitude);
 
-                // Make an API call to get weather data using the obtained latitude and longitude
+
                 getWeather(latitude, longitude).then((data) => {
                     setWeather(data);
                 });
@@ -29,10 +29,13 @@ function WeatherDialog() {
     }, []);
 
     return (
-        <div>
+        <div className={classes.container}>
             {latitude && longitude && (
-                <p>
-                    Latitude: {latitude}, Longitude: {longitude}
+                <p className={classes.container2}>
+                    Latitude: {latitude}, <br />
+                    Longitude: {longitude}
+
+
                 </p>
             )}
             {weather && (

@@ -36,7 +36,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <WeatherDialog />
+      <div>
+        <WeatherDialog className='weathercontain' /></div>
       <ExpenseForm onExpenseAdd={handleExpenseAdd} />
       <ExpenseList onRemove={handleRemove} data={expenses} />
       <Footer />
